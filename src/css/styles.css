@@ -10,13 +10,13 @@ body {
   margin: 0 auto;
 }
 
-.search-form {
+#search-form {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.search-form input {
+#search-form input {
   width: 300px;
   padding: 12px;
   border: 2px solid #ccc;
