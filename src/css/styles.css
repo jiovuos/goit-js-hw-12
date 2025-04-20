@@ -25,7 +25,7 @@ body {
   outline: none;
 }
 
-.search-form button {
+#search-form button {
   padding: 12px 20px;
   border: none;
   background-color: #2196f3;
@@ -36,7 +36,7 @@ body {
   transition: background-color 0.3s;
 }
 
-.search-form button:hover {
+#search-form button:hover {
   background-color: #1976d2;
 }
 
