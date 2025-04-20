@@ -4,22 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Search App</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <form class="form">
-      <label>
+    <div class="container">
+      <form class="search-form" id="search-form">
         <input
           type="text"
-          name="search-text"
+          name="searchQuery"
+          autocomplete="off"
           placeholder="Search images..."
-          required
         />
-      </label>
-      <button type="submit">Search</button>
-    </form>
+        <button type="submit">Search</button>
+      </form>
 
-    <span class="loader hidden"></span>
-    <ul class="gallery"></ul>
+      <div class="gallery" id="gallery"></div>
+
+      <div class="loader-container">
+        <span class="loader is-hidden" id="loader"></span>
+      </div>
+
+      <div class="load-more-container">
+        <button type="button" class="load-more is-hidden" id="load-more">
+          Load more
+        </button>
+      </div>
+    </div>
 
     <script type="module" src="./main.js"></script>
   </body>

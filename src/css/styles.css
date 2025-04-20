@@ -1,73 +1,106 @@
 body {
   font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #f4f4f4;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 24px;
 }
 
-.form {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-form {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-input[type='text'] {
-  padding: 10px;
+.search-form input {
   width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  font-size: 16px;
+  outline: none;
 }
 
-button {
-  padding: 10px 20px;
+.search-form button {
+  padding: 12px 20px;
   border: none;
-  background-color: #4E75FF;
+  background-color: #2196f3;
   color: white;
-  border-radius: 0 4px 4px 0;
+  font-size: 16px;
+  border-radius: 0 8px 8px 0;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #6C8CFF;
+.search-form button:hover {
+  background-color: #1976d2;
 }
 
 .gallery {
-  list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 16px;
-  padding: 0;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
 }
 
-.gallery-item {
-  background: white;
+.photo-card {
+  background-color: white;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.gallery-image {
+.photo-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  display: block;
 }
 
 .info {
+  display: flex;
+  justify-content: space-around;
   padding: 10px;
   font-size: 14px;
+  background-color: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+.load-more-container,
+.loader-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.load-more {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #4E75FF;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.load-more:hover {
+  background-color: #6C8CFF;
 }
 
 .loader {
-  display: block;
-  margin: 0 auto 20px;
+  display: inline-block;
   width: 48px;
   height: 48px;
-  border: 5px solid #ccc;
-  border-top: 5px solid #4E75FF;
+  border: 4px solid #ccc;
+  border-top-color: #333;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
-.hidden {
+.is-hidden {
   display: none;
 }
 
